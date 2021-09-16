@@ -4,7 +4,6 @@
 #SBATCH --time=0:01:00                  # Max wall time
 #SBATCH --partition=shas-testing        # Specify Summit Haswell nodes
 #SBATCH --output=hostname_%j.out        # Rename standard output file
-#SBATCH --reservation=tutorial1		# Reservation (only valid during workshop)
 
 
 # Written by:	Shelley Knuth, 15 July 2016
