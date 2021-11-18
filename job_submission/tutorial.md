@@ -28,4 +28,27 @@ On a machine that has slurm installed (CU Research Computing for this example).
  <commands>
  hostname
 ```
+## Write your first batch job
+
+### Create and run a batch job that has the following:
+
+1) The job will run on 1 core of 1 node
+2) We will request a 1 minute wall time
+3) Run on the shas-testing partition
+4) Set the output file to be named “sleep.%j.out”
+5) Name your job “sleep”
+Bonus: Email yourself when the job ends
+6) Contains the following commands
+```
+echo "Running on host" $(hostname)
+echo "Starting Sleep"
+sleep 30
+echo "Ending Sleep. Exiting Job!"
+```
+
+> Note: A [brief list](https://curc.readthedocs.io/en/latest/running-jobs/job-resources.html#slurm-resource-flags) of slurm directives/flags.
+
+### Solutions
+
+For solutions go to the `./solutions` directory, solutions are prefixed with "answer"
 
