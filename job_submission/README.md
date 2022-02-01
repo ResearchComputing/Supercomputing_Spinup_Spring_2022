@@ -2,7 +2,55 @@
 
 ## Introduction 
 
+This tutorial will introduce you to the concept of "Jobs" in High Performance Computing (HPC), why they are necessary, explore different types of jobs, and provide examples for you to work through.
+
+:warning: **__This tutorial assumes you are using CU Research Computing resources, the following jobs and scripts will ONLY work on the CURC system. Visit [this link](https://curc.readthedocs.io/en/latest/access/logging-in.html) if you need an account and login directions__** :warning:
+
+The basic structure of this tutorial directory follows:
+
+```
+README.md 		# *this* tutorial markdown file
+scripts			# directory which includes skeleton scripts for tutorial examples
+programs		# directory which includes programs our jobs will execute 
+solutions 		# directory with solution job scripts for examples
+```
+
+We'll start with a brief introduction to jobs and why they are necessary, describe the main job types, and work through some examples. All of the examples in this section will require access to a terminal. We'll finish up with some non-traditional job submissions which allow for access to RC hardware via a browser a some graphical user interfaces (GUIs).  
+
+## HPC Jobs
+
+High Performance Computing (HPC) systems are more often than not, environments where many users share/compete for the same resources. Because our HPC clusters are shared resources with many users trying to utilize available compute with their applications, we need a system to divide compute in a simple and fair system.
+
+CU Research Computing uses the resource managment program SLURM (Simple Linux Utility for Resource Management) to manage resources. Through SLURM, users can request allotments of computer resources called "Jobs." Jobs are submitted to a queue where they will wait until resources become available and then run.
+
+Through SLURM, users can request jobs in 2 way:
+
+1) Batch jobs (most common)
+
+2) Interactive jobs
+
+Both types of jobs give a user access to a compute node (hardware where intense computation should be run, visit [link](https://curc.readthedocs.io/en/latest/compute/node-types.html) for description of different node types at CURC). 
+
+### Batch Jobs
+
+The primary method of running applications on Research Computing (and other HPC centers) resources is through a batch job. A batch job is a job that runs on a compute node with little or no interaction with the users
+
+Unlike running an application on your personal machine, you do not call the application you wish to run directly. Instead you create a job script that includes a call to your application. Job scripts are simply a set of resource requests and commands. When a job script is run, all the commands in the job script are executed on a compute node.
+
+__The primary advantage of a batch job is that you don't have to sit around waiting for resources to become avaiable, just submit and wait.__
+
+### Interactive Jobs
+
+As the name would imply, an interactive job is a job that allows users to interact with requested resources in real time. Users can run applications, execute scripts, or run other commands directly on a compute node.
+
+__The primary advantage of an interactive job is that you get real-time access to a compute node. Do note that you will have to wait for resources to become available however.__ 
+
+
 ## Submit your first batch job 
+
+Most of our examples will batch jobs as these are the most commmon, and often trickest to get familiar with.
+
+We'll 
 
 From this directory (".") run the command:
 ```
