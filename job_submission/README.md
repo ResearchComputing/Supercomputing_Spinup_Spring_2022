@@ -15,7 +15,7 @@ programs		# directory which includes programs our jobs will execute
 solutions 		# directory with solution job scripts for examples
 ```
 
-We'll start with a brief introduction to jobs and why they are necessary, describe the main job types, and work through some examples. All of the examples in this section will require access to a terminal. We'll finish up with some non-traditional job submissions which allow for access to RC hardware via a browser a some graphical user interfaces (GUIs).  
+We'll start with a brief introduction to jobs and why they are necessary, describe main job types, and work through some examples. All of the examples in this section will require access to a terminal. We'll finish up with some non-traditional job submissions which allow for access to RC hardware via some graphical browser application.
 
 ## HPC Jobs
 
@@ -43,18 +43,21 @@ __The primary advantage of a batch job is that you don't have to sit around wait
 
 As the name would imply, an interactive job is a job that allows users to interact with requested resources in real time. Users can run applications, execute scripts, or run other commands directly on a compute node.
 
-__The primary advantage of an interactive job is that you get real-time access to a compute node. Do note that you will have to wait for resources to become available however.__ 
+__The primary advantage of an interactive job is that you get real-time access to a compute node. Do note that you will have to wait for resources to become available.__ 
 
 
 ## Submit your first batch job 
 
-Most of our examples will batch jobs as these are the most commmon, and often trickest to get familiar with.
+Most of our examples are batch jobs as these are the most commmon and often trickest to get familiar with.
 
-We'll 
-
-From this directory (".") run the command:
+We'll start off with simply running a pre-written script to get familiar with the syntax. You run your job script by passing it to the Slurm queue with the `sbatch` command followed by your job script name:
 ```
-sbatch submit_test.sh
+sbatch <your-jobscript-name>
+```
+
+From this directory run the command:
+```
+sbatch scripts/submit_test.sh
 ```
 On a machine that has slurm installed (CU Research Computing for this example).
 
