@@ -4,7 +4,7 @@
 #SBATCH --time=0:01:00			# Max walltime
 #SBATCH --qos=normal	      		# Specify QOS
 #SBATCH --partition=shas		# Specify Summit haswell nodes
-#SBATCH --output=python_%j.out		# Output file name
+#SBATCH --output=./output/python_%j.out		# Output file name
 
 # Written by:	Andrew Monaghan, 08 March 2018
 # Updated by:	Shelley Knuth, 17 May 2019
@@ -18,5 +18,5 @@ module load python/3.5.1
 module load intel impi   
 
 # Run Python Script
-cd progs
+cd programs 
 mpirun -np 4 python hello1.py
