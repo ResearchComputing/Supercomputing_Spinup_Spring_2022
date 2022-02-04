@@ -3,7 +3,7 @@
 #SBATCH --ntasks=1        			  # Number of requested cores
 #SBATCH --time=0:01:00			      # Max walltime
 #SBATCH --partition=shas-testing  # Specify Summit Haswell testing nodes
-#SBATCH --output=R_code_%j.out		# Output file name
+#SBATCH --output=./output/R_code_%j.out		# Output file name
 
 
 # Written by:	Shelley Knuth, 24 February 2014

@@ -6,7 +6,7 @@
 #SBATCH --ntasks=1                      # Number of requested tasks (cores)
 #SBATCH --time=0:01:00                  # Max wall time
 #SBATCH --partition=shas-testing        # Specify Summit Haswell testing nodes
-#SBATCH --output=sleep.%j.out           # Rename standard output file
+#SBATCH --output=./output/sleep.%j.out  # Rename standard output file
 #SBATCH --mail-user=<user@email.com>    # Email address
 #SBATCH --mail-type=END									# Email when job ends
 
