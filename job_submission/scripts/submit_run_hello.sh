@@ -6,7 +6,7 @@
 #SBATCH --partition=shas-testing
 #SBATCH --ntasks=4
 #SBATCH --job-name=lbPythonDemo
-#SBATCH --output=loadbalance.%j.out
+#SBATCH --output=./output/loadbalance.%j.out
 
 ## Software
 module purge
@@ -15,5 +15,5 @@ module load python
 module load loadbalance
 
 ## User Scripting
-cd progs
+cd programs 
 mpirun lb lb_cmd_file
